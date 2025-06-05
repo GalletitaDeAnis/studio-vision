@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { HomeAnimatedSection } from "@/components/HomeAnimatedSection";
 import { Card, CardContent } from "@/components/ui/card";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -58,7 +59,7 @@ export default function Home() {
 
     <main className="min-h-screen bg-gradient-to-br from-slate-950 to-slate-900 text-white">
       <header className="p-6 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Paolo Pizarro Studio</h1>
+        <h1 className="text-xl font-bold tracking-tight">Paolo Pizarro Studio</h1>
         <nav className="space-x-4">
           <Link href="/services">Servicios</Link>
           <Link href="/portfolio">Portafolio</Link>
@@ -95,6 +96,8 @@ export default function Home() {
           </CardContent>
         </Card>
       </section>
+
+      <WhatsAppButton /> {/* 👈 AÑADIDO AQUÍ */}
 
       <footer className="text-center p-6 text-slate-500">
         &copy; {new Date().getFullYear()} Paolo Pizarro Studio. Todos los derechos reservados.
