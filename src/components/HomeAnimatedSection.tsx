@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 
 export function HomeAnimatedSection() {
   return (
-    <section className="p-10 text-center">
+    //<section className="p-10 text-center">
+    <section className="py-32 px-10 text-center">
       <motion.h2
         className="text-4xl font-extrabold mb-4"
         initial={{ opacity: 0, y: -20 }}
