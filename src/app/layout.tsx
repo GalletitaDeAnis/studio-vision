@@ -15,9 +15,27 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// SEO + Favicon + Metadatos
 export const metadata: Metadata = {
   title: "Agencia Visual Integral",
   description: "Diseño, branding, modelado 3D, desarrollo web y más.",
+  keywords: [
+    "diseño gráfico",
+    "branding",
+    "desarrollo web",
+    "modelado 3D",
+    "publicidad",
+    "agencia creativa",
+    "marketing visual"
+  ],
+  creator: "Agencia Visual Integral",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
+  themeColor: "#000000",
+  viewport: "width=device-width, initial-scale=1.0",
 };
 
 export default function RootLayout({
@@ -41,9 +59,17 @@ export default function RootLayout({
             gtag('config', 'G-XXXXXXXXXX');
           `}
         </Script>
+
+        {/* Meta adicionales */}
+        <meta charSet="UTF-8" />
+        <meta name="robots" content="index, follow" />
+        <meta name="google" content="notranslate" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black`}
       >
         {children}
       </body>
