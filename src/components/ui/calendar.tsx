@@ -7,7 +7,7 @@ import "react-day-picker/dist/style.css";
 export interface CalendarProps {
   selected: Date | undefined;
   onSelect: (date: Date | undefined) => void;
-  mode?: "single" | "multiple" | "range";
+  mode?: "single"; // si solo usas "single", ponlo así
 }
 
 export function Calendar({ selected, onSelect, mode = "single" }: CalendarProps) {
